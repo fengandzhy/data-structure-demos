@@ -5,12 +5,12 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-public class OperateWithoutIndex {
-	private static Logger logger = Logger.getLogger(OperateWithoutIndex.class);
+public class OperateNoIndexRepeatable {
+	private static Logger logger = Logger.getLogger(OperateNoIndexRepeatable.class);
 	private int[] datas =null;
 	private int currentIndex =0;
 	
-	public OperateWithoutIndex(int length){
+	public OperateNoIndexRepeatable(int length){
 		this.datas = new int[length];
 	}
 	
@@ -66,7 +66,7 @@ public class OperateWithoutIndex {
 	}
 	
 	public static void main(String[] args) {
-		OperateWithoutIndex o = new OperateWithoutIndex(20);
+		OperateNoIndexRepeatable o = new OperateNoIndexRepeatable(20);
 		
 		o.insert(3);
 		o.insert(6);
