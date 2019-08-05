@@ -1,5 +1,8 @@
 package com.citi.datastructure.array.unordered;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 
 public class OperateWithoutIndex {
@@ -32,12 +35,14 @@ public class OperateWithoutIndex {
 		}while(index>=0);		
 	}
 	
-	public int searchOne(int data){
+	public List<Integer> search(int data){
+		List<Integer> retList = new ArrayList<>();
 		int index = getIndex(0,data);
-		if(index>=0){
-			return datas[index];
+		while(index>=0){
+			retList.add(datas[index]);
+			index = getIndex(index+1,data);
 		}
-		return 0;
+		return retList;
 	}
 	
 	public void printDatas(){
@@ -65,6 +70,7 @@ public class OperateWithoutIndex {
 		
 		o.insert(3);
 		o.insert(6);
+		o.insert(6);
 		o.insert(2);
 		o.insert(2);
 		o.insert(3);
@@ -73,8 +79,8 @@ public class OperateWithoutIndex {
 		o.remove(2);
 		o.printDatas();
 		
-//		int ret = o.searchOne(6);
-//		logger.info("ret="+ret);
+		List<Integer> ret = o.search(6);
+		logger.info("ret="+ret);
 		
 	}
 
