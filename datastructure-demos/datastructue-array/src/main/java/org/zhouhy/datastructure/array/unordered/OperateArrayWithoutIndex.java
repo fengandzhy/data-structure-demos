@@ -39,7 +39,7 @@ public class OperateArrayWithoutIndex {
 	
 	private int getIndex(int data){
 		int index =-1;
-		for(int i=0;i<datas.length;i++){
+		for(int i=0;i<currentIndex;i++){
 			if(datas[i]==data){
 				index = i;
 				break;
