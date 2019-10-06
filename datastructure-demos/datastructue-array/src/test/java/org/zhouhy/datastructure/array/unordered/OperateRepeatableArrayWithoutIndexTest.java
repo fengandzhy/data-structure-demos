@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.List;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -50,7 +51,7 @@ public class OperateRepeatableArrayWithoutIndexTest {
 		operateRepeatableArrayWithoutIndex.remove(7);
 		
 		int currentIndex = operateRepeatableArrayWithoutIndex.getCurrentIndex();
-		int[] datas = operateRepeatableArrayWithoutIndex.getDatas();
+		
 		assertTrue (currentIndex == 5);
 	}
 	
@@ -67,5 +68,8 @@ public class OperateRepeatableArrayWithoutIndexTest {
 	}
 	
 	
-
+	@After
+	public void destory() {
+		System.out.println("≤‚ ‘Ω· ¯");
+	}
 }
