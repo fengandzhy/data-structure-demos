@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.zhouhy.datastructure.array.ordered.BinarySearch;
+
 
 public class BubbleSortTest {
 	
@@ -42,6 +42,17 @@ public class BubbleSortTest {
 	public void test3() {
 		int array[] = {2,3,1,4,7,5,8,6,9};
 		bubbleSort.bubbleSort3(array);
+		for(int i =0;i<array.length;i++){
+			System.out.print(array[i]+",");
+		}
+		assertTrue (array[0] == 1 && array[array.length-1] ==9);
+	}
+	
+	
+	@Test
+	public void test4() {
+		int array[] = {2,3,1,4,7,5,8,6,9};
+		bubbleSort.bubbleSort4(array);
 		for(int i =0;i<array.length;i++){
 			System.out.print(array[i]+",");
 		}

@@ -2,7 +2,8 @@ package org.zhouhy.datastructure.array.sort;
 
 /**
  * 总之，冒泡法排序有两个循环i,j，
- * 外层的i循环控制元素的比较范围，内层的j循环控制元素的起始比较位置。
+ * 外层的i循环控制元素的比较范围(循环次数,这个循环次数始终都应该比数组长度少1)，
+ * 内层的j循环负责具体的比较，升序还是降序。
  * */
 public class BubbleSort {
 	
@@ -51,6 +52,22 @@ public class BubbleSort {
 					int temp = array[j];
 					array[j] = array[j+1];
 					array[j+1] = temp;
+				}
+			}
+		}
+	}
+	
+	/**
+	 * 外层的某个元素跟整个内层比
+	 * */
+	public void bubbleSort4(int array[]){
+		int length = array.length;
+		for(int i = length-1;i>0;i--){
+			for(int j=0;j<i;j++){
+				if(array[i]<array[j]){
+					int temp = array[i];
+					array[i] = array[j];
+					array[j] = temp;
 				}
 			}
 		}
