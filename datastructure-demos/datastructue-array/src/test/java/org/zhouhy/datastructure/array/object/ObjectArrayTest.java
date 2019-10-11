@@ -45,7 +45,6 @@ public class ObjectArrayTest {
 		
 		
 		this.objectArray.remove(new User(1,"www","acc"));
-		User[] users = this.objectArray.getDatas();
 		int currentIndex = this.objectArray.getCurrentIndex();
 		assertTrue (currentIndex==5);
 	}
