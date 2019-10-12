@@ -8,6 +8,7 @@
 	<modules>
 		<module>datastructue-array</module>
 		<module>datastructure-stack</module>
+		<module>datastructure-queue</module>
 	</modules>
 	
 	<dependencies>
