@@ -17,11 +17,18 @@ public class MyQueue {
 			endCircle++;
 			if(beginIndex ==0){
 				System.out.println("队列已满不能再加!");
+				endIndex = -1;
 				return;
 			}
-			endIndex =-1;
+			endIndex =0;
+		}else{
+			if(endIndex == beginIndex-1 && endCircle > beginCircle){
+				System.out.println("队列已满不能再加!");
+				return;
+			}
+			endIndex++;
 		}
-		endIndex++;
+		
 		queue[endIndex] = data;
 	}
 	
@@ -39,10 +46,31 @@ public class MyQueue {
 			beginIndex =0;
 		}else{
 			beginIndex ++;
-		}
-		
-		
+		}		
 		return data;
 	}
 	
+	public boolean isFull(){
+		int addItem = endCircle*queue.length+endIndex+1;
+		int removeItem = beginCircle*queue.length+beginIndex;
+		if(addItem-removeItem ==5){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	public int getSize(){
+		int addItem = endCircle*queue.length+endIndex+1;
+		int removeItem = beginCircle*queue.length+beginIndex;
+		return addItem-removeItem;
+	}
+
+	public int getBeginIndex() {
+		return beginIndex;
+	}
+
+	public int getEndIndex() {
+		return endIndex;
+	}	
 }
