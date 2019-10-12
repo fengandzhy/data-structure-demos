@@ -76,6 +76,43 @@ public class MyQueueTest {
 		assertTrue(data1==1 && data2 == 2 && size == 0 && data3 == null);
 	}
 	
+	@Test
+	public void test6() {
+		myQueue.insert(1);
+		myQueue.insert(2);
+		myQueue.insert(3);
+		myQueue.insert(4);
+		
+		Integer data1 = myQueue.remove();
+		Integer data2 = myQueue.remove();
+		Integer data3 = myQueue.remove();
+		
+		myQueue.insert(1);
+		myQueue.insert(2);
+		myQueue.insert(3);
+		myQueue.insert(4);
+		
+		myQueue.insert(5);
+		myQueue.insert(6);
+		myQueue.insert(7);
+		myQueue.insert(8);
+		
+		Integer data4 = myQueue.remove();
+		Integer data5 = myQueue.remove();
+		Integer data6 = myQueue.remove();
+		
+		Integer data7 = myQueue.remove();
+		Integer data8 = myQueue.remove();
+		Integer data9 = myQueue.remove();
+		
+		int size = myQueue.getSize();
+		assertTrue(data1==1 && data2 == 2 && size == 0 && data3 == 3);
+		
+		assertTrue(data4==4 && data5 == 1 && data6 == 2 && data7 == 3);
+		
+		assertTrue(data8==4 && data9 == null);
+	}
+	
 	@After
 	public void destory() {
 		System.out.println("²âÊÔ½áÊø");
