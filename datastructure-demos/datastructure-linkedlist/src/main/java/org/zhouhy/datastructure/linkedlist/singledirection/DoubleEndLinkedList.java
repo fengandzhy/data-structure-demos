@@ -1,5 +1,8 @@
 package org.zhouhy.datastructure.linkedlist.singledirection;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.zhouhy.datastructure.linkedlist.node.LinkedListNode;
 
 public class DoubleEndLinkedList {
@@ -14,6 +17,49 @@ public class DoubleEndLinkedList {
 			lastNode = node;
 		}
 		firstNode = node;
+	}
+	
+	public void insertNodeFromEnd(int id){
+		LinkedListNode node = new LinkedListNode(id);		
+		if(lastNode == null) {			
+			firstNode = node;
+		}else{
+			lastNode.setNext(node);
+		}		
+		lastNode = node;
+	}
+	
+	public List<LinkedListNode> findById(int id){
+		List<LinkedListNode> list = new ArrayList<>();
+		LinkedListNode node = firstNode;
+		while(node!=null){
+			if(id == node.getId()){
+				list.add(node);
+			}
+			node = node.getNext();
+		}
+		return list;
+	}
+	
+	public void removeById(int id){
+		LinkedListNode currentNode = firstNode;		
+		LinkedListNode previousNode = null;
+		while(currentNode!=null){
+			LinkedListNode nextNode = currentNode.getNext();
+			if(currentNode.getId() == id){				
+				if(previousNode!=null){
+					previousNode.setNext(nextNode);
+				}else{
+					firstNode = nextNode;
+				}				
+				if(nextNode == null){
+					lastNode = previousNode;
+				}				
+			}else{
+				previousNode = currentNode;				
+			}
+			currentNode = nextNode;
+		}		
 	}
 	
 	public int size(){
