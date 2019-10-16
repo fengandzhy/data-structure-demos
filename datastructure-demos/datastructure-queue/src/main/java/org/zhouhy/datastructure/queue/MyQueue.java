@@ -1,5 +1,8 @@
 package org.zhouhy.datastructure.queue;
 
+/**
+ * 这是一个循环队列
+ * */
 public class MyQueue {
 	private int[] queue;
 	private int beginIndex =0;

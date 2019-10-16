@@ -48,9 +48,7 @@ public class MyStackByLinkedListTest {
 		myStackByLinkedList.pop();
 		myStackByLinkedList.pop();
 		assertTrue(myStackByLinkedList.isEmpty());		
-	}
-	
-	
+	}	
 	
 	@After
 	public void destroy(){

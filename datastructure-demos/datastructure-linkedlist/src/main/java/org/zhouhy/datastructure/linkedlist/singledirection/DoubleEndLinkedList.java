@@ -41,6 +41,19 @@ public class DoubleEndLinkedList {
 		return list;
 	}
 	
+	public void removeEnd(){
+		LinkedListNode currentNode = firstNode;	
+		LinkedListNode previousNode = null;
+		if(currentNode!=null){
+			while(currentNode.getNext()!=null){
+				previousNode = currentNode;
+				currentNode = currentNode.getNext();
+			}
+			previousNode.setNext(null);
+			lastNode = previousNode;
+		}		
+	}
+	
 	public void removeById(int id){
 		LinkedListNode currentNode = firstNode;		
 		LinkedListNode previousNode = null;
