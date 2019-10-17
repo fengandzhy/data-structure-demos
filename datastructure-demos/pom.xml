@@ -10,6 +10,7 @@
 		<module>datastructure-stack</module>
 		<module>datastructure-queue</module>
 		<module>datastructure-linkedlist</module>
+		<module>datastructure-recursion</module>
 	</modules>
 	
 	<dependencies>
