@@ -16,6 +16,11 @@ public class BinarySearchByRecursionTest {
 		binarySearchByRecursion.insert(2);
 		binarySearchByRecursion.insert(3);
 		
+		binarySearchByRecursion.insert(7);
+		binarySearchByRecursion.insert(9);
+		binarySearchByRecursion.insert(4);
+		binarySearchByRecursion.insert(6);
+		
 		int currentIndex = binarySearchByRecursion.getCurrentIndex();
 		
 		int index = binarySearchByRecursion.binarySearch(2, 0, currentIndex-1);
