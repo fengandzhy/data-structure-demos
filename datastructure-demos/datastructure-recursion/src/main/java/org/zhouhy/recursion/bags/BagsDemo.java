@@ -7,7 +7,11 @@ import java.util.List;
  * */
 public class BagsDemo {
 	
-	public void bag(int targetArray,int beginIndex,int endIndex,List<Integer> results){
+	public void bag(int[] targetArray,int targetWeight,int beginIndex,List<int[]> results){
 		
 	}
+	
+	
+	
+	
 }
