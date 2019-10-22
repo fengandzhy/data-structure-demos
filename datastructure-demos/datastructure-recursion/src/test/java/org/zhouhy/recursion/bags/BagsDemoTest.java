@@ -46,21 +46,6 @@ public class BagsDemoTest {
 		}
 	}
 	
-	@Test
-	public void test3() {
-		demo = new BagsDemo();
-		int[] as = new int[]{12,8,7,5};		
-		List<List<Integer>> results = new ArrayList<>();
-		List<Integer> result = new ArrayList<>();
-		demo.bag2(as, 20, 0, results, result);
-		for(List<Integer> r:results){
-			for(Integer i:r){
-				System.out.print(i+",");
-			}
-			System.out.println();
-		}
-	}
-	
 	@After
 	public void destory(){
 		System.out.println("²âÊÔ½áÊø");
