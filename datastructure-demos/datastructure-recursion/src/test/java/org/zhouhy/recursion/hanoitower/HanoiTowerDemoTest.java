@@ -24,8 +24,7 @@ public class HanoiTowerDemoTest {
 	    System.setOut(new PrintStream(outContent));
 		hanoiTowerDemo = new HanoiTowerDemo();
 		hanoiTowerDemo.move(6, "A", "B", "C");
-		String str = outContent.toString();
-		int i = 2^1 - 1;
+		String str = outContent.toString();		
 		String[] strs = str.split("\n");		
 		assertTrue(strs.length == Math.pow(2,6)-1);
 	}
