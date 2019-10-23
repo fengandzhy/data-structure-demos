@@ -12,11 +12,36 @@ public class MergeSort {
 		sort(array,beginIndex,mid,endIndex);		
 	}
 	
-	public void sort(int[] array,int beginIndex,int center,int endIndex) {
+	public void sort(int[] array,int beginIndex,int mid,int endIndex) {
+		int tempArray[] = new int[array.length];
+		int secondIndex = mid+1;
+		int tempIndex=beginIndex;
+		int tempIndex1 = beginIndex;
+		while(beginIndex<=mid && secondIndex<=endIndex){
+			if(array[beginIndex]>=array[secondIndex]){
+				tempArray[tempIndex] = array[secondIndex];
+				tempIndex++;
+				secondIndex++;
+			}else{
+				tempArray[tempIndex] = array[beginIndex];
+				tempIndex++;
+				beginIndex++;
+			}
+		}
+		while(beginIndex<=mid){
+			tempArray[tempIndex] = array[beginIndex];
+			tempIndex++;
+			beginIndex++;
+		}
 		
-		int[] leftArray = new int[center-beginIndex];
-		int[] rightArray = new int[endIndex-center-1];
+		while(secondIndex<=endIndex){
+			tempArray[tempIndex] = array[secondIndex];
+			tempIndex++;
+			secondIndex++;
+		}
 		
-		
+		for(int i=tempIndex1;i<=endIndex;i++){
+			array[i] = tempArray[i];
+ 		}		
 	}
 }
