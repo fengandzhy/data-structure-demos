@@ -11,6 +11,7 @@
 		<module>datastructure-queue</module>
 		<module>datastructure-linkedlist</module>
 		<module>datastructure-recursion</module>
+		<module>datastructure-advancedsort</module>
 	</modules>
 	
 	<dependencies>
