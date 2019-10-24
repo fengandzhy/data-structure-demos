@@ -13,6 +13,7 @@ public class MergeSort {
 	}
 	
 	public void sort(int[] array,int beginIndex,int mid,int endIndex) {
+		System.out.println("begin sort!"+beginIndex+" "+endIndex+" "+mid);		
 		int tempArray[] = new int[array.length];
 		int secondIndex = mid+1;
 		int tempIndex=beginIndex;
@@ -42,6 +43,8 @@ public class MergeSort {
 		
 		for(int i=tempIndex1;i<=endIndex;i++){
 			array[i] = tempArray[i];
+//			System.out.print(array[i]+",");
+//			System.out.println();
  		}		
 	}
 }
