@@ -20,6 +20,9 @@ public class ShellSortDemoTest {
 		shellSortDemo = new ShellSortDemo();
 		int[] as = new int[]{3,5,4,8,7,90,80,88};
 		shellSortDemo.shellsort(as);
+		for(int i=0;i<as.length;i++){
+			System.out.println(as[i]);
+		}
 	}
 	
 	@After

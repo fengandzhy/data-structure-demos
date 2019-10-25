@@ -11,7 +11,7 @@ public class ShellSortDemo {
 		//3：然后逐步缩小分组的间隔，重复第2步
 		int j=0;
 		int temp=0;
-		for(;increment > 0;increment=(increment-1)/3){
+		while(increment > 0){
 			//2：对每一组进行插入法排序
 			for(int i=increment;i<as.length;i++){
 				temp = as[i];
@@ -24,6 +24,7 @@ public class ShellSortDemo {
 				}
 				as[j] = temp;
 			}
+			increment=(increment-1)/3;
 		}
 	}
 }
