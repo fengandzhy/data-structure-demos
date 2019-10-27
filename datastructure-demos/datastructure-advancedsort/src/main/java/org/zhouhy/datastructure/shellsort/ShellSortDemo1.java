@@ -8,6 +8,7 @@ public class ShellSortDemo1 {
 		
 		while(increment>0){
 			for(int i=increment;i<length;i++){
+				int index = i;
 				int temp = array[i];
 				for(int j=i;j>0;j=j-increment){
 					
