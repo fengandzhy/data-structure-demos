@@ -11,7 +11,7 @@ public class ShellSortDemo1 {
 				int index = i;
 				int temp = array[i];
 				for(int j=i;j>0;j=j-increment){
-					
+					    
 				}
 			}
 		}

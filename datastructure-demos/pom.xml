@@ -12,6 +12,8 @@
 		<module>datastructure-linkedlist</module>
 		<module>datastructure-recursion</module>
 		<module>datastructure-advancedsort</module>
+		<module>datastructure-trees</module>
+		<module>datastructure-maps</module>
 	</modules>
 	
 	<dependencies>
